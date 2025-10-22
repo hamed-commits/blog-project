@@ -7,7 +7,7 @@ import SidebarController from "../sidebar/sidebarcontroller";
 
 export default function Header() {
   return (
-    <header className="dark:bg-indigo-700 py-2.5 bg-gray-100 dark:shadow-[0px_0px_20px_5px_rgba(67,_56,_202,_0.5)] shadow-[0px_10px_20px_0px_rgba(0,_0,_0,_0.1)]">
+    <header className="dark:bg-indigo-700 py-2.5 bg-gray-100 dark:shadow-[0px_0px_20px_5px_rgba(67,_56,_202,_0.5)] shadow-[0px_10px_20px_0px_rgba(0,_0,_0,_0.1)] mb-10">
       <Container>
         <nav className="flex justify-between items-center">
           <div className="flex gap-1 items-center">

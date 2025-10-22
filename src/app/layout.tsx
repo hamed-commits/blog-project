@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Vazirmatn } from "next/font/google";
 import "./globals.css";
-import { Footer, Header } from "@/components/index";
+import { Container, Footer, Header } from "@/components/index";
 import { ThemeProvider } from "next-themes";
 const vazir = Vazirmatn({
   variable: "--font-lalezar",
@@ -28,7 +28,7 @@ export default function RootLayout({
         >
           <div className="max-w-[1440px] mx-auto">
             <Header />
-            {children}
+            <Container>{children}</Container>
             <Footer />
           </div>
         </ThemeProvider>
