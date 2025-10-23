@@ -42,7 +42,7 @@ export const articles = [
     slug: "best-productivity-tools-remote-work",
     views: 245,
     read_time: 6,
-    category: { title: "قله ها", thumbnail: "/images/tech.jpg", slug: "tech" },
+    category: { title: "قله ها", thumbnail: "/images/tech.jpg", slug: "قله" },
     author: { full_name: "حامد سیادتی", image: defaultAvatar },
   },
   {
@@ -130,5 +130,40 @@ export const articles = [
       slug: "کوهنوردی",
     },
     author: { full_name: "مهرداد صیادی", image: defaultAvatar },
+  },
+];
+
+export const categories = [
+  {
+    id: 1,
+    title: "تجهیزات",
+    thumbnail: defaultArticlePic,
+    slug: "technology",
+  },
+  { id: 2, title: "کوهنوردی", thumbnail: defaultArticlePic, slug: "health" },
+  {
+    id: 3,
+    title: "پیمایش",
+    thumbnail: defaultArticlePic,
+    slug: "lifestyle",
+  },
+  {
+    id: 5,
+    title: "غذا و تغذیه",
+    thumbnail: defaultArticlePic,
+    slug: "nutrition",
+  },
+  { id: 6, title: "جنگل", thumbnail: defaultArticlePic, slug: "fitness" },
+  {
+    id: 7,
+    title: "قله",
+    thumbnail: defaultArticlePic,
+    slug: "business",
+  },
+  {
+    id: 9,
+    title: "آموزش",
+    thumbnail: defaultArticlePic,
+    slug: "entertainment",
   },
 ];

@@ -1,52 +1,9 @@
 "use client";
 import Image from "next/image";
-import React, { useState } from "react";
-// فرض بر این است که defaultArticlePic تعریف شده است
-import { defaultArticlePic } from "./image";
-
-interface CategoryType {
-  id: number;
-  title: string;
-  thumbnail: string;
-  slug: string;
-}
+import React from "react";
+import { categories } from "@/data/data";
 
 export default function Category() {
-  const [categories] = useState<CategoryType[]>([
-    {
-      id: 1,
-      title: "تجهیزات",
-      thumbnail: defaultArticlePic,
-      slug: "technology",
-    },
-    { id: 2, title: "کوهنوردی", thumbnail: defaultArticlePic, slug: "health" },
-    {
-      id: 3,
-      title: "پیمایش",
-      thumbnail: defaultArticlePic,
-      slug: "lifestyle",
-    },
-    {
-      id: 5,
-      title: "غذا و تغذیه",
-      thumbnail: defaultArticlePic,
-      slug: "nutrition",
-    },
-    { id: 6, title: "جنگل", thumbnail: defaultArticlePic, slug: "fitness" },
-    {
-      id: 7,
-      title: "قله",
-      thumbnail: defaultArticlePic,
-      slug: "business",
-    },
-    {
-      id: 9,
-      title: "آموزش",
-      thumbnail: defaultArticlePic,
-      slug: "entertainment",
-    },
-  ]);
-
   return (
     <div className="lg:mt-0 mt-6">
       <h3 className="text-xl font-bold mb-4 text-gray-800 dark:text-white">

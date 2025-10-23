@@ -3,6 +3,7 @@ import { defaultArticlePic, defaultAvatar } from "./image";
 import { MountainSnow } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
+import { articles } from "@/data/data";
 
 export default function FirstPosts() {
   return (
@@ -37,134 +38,40 @@ export default function FirstPosts() {
       </div>
       <div className="col-span-12 md:col-span-6">
         <div className="grid grid-cols-2 md:grid-cols-2 gap-2">
-          <div className="rounded-2xl dark:border-none overflow-hidden h-fit sm:col-span-1 col-span-2">
-            <Link href="/">
-              <div className="relative w-full rounded-xl">
-                <Image
-                  width={400}
-                  alt="عکس مقاله"
-                  height={200}
-                  src={defaultArticlePic}
-                  className="w-full h-full object-cover rounded-xl"
-                />
-                <div className="absolute bottom-0 left-0 w-full h-[10rem] bg-gradient-to-t from-primary dark:from-indigo-500 to-transparent"></div>
-                <div className="text-white p-3 space-y-3 absolute bottom-0">
-                  <div className="inline-flex items-center gap-2 bg-amber-600 w-auto dark:bg-indigo-500 text-xs me-2 p-1 rounded-md">
-                    <MountainSnow />
-                    <p>کوهنوردی</p>
-                  </div>
-                  <h3 className="text-xl font-bold drop-shadow-lg hidden sm:block">
-                    تایتل مقاله
-                  </h3>
-                  <div className="flex items-center gap-2 text-sm font-semibold">
-                    <img
-                      className="h-6 w-6 rounded-full"
-                      src={defaultAvatar}
-                      alt="آواتار"
-                    />
-                    <p>10 مهر 1403</p>
-                    <p>3 دقیقه</p>
-                  </div>
-                </div>
-              </div>
-            </Link>
-          </div>
-          <div className="rounded-2xl dark:border-none overflow-hidden h-fit sm:col-span-1 col-span-2">
-            <Link href="/">
-              <div className="relative w-full rounded-xl">
-                <Image
-                  width={400}
-                  alt="عکس مقاله"
-                  height={200}
-                  src={defaultArticlePic}
-                  className="w-full h-full object-cover rounded-xl"
-                />
-                <div className="absolute bottom-0 left-0 w-full h-[10rem] bg-gradient-to-t from-primary dark:from-indigo-500 to-transparent"></div>
-                <div className="text-white p-3 space-y-3 absolute bottom-0">
-                  <div className="inline-flex items-center gap-2 bg-amber-600 w-auto dark:bg-indigo-500 text-xs me-2 p-1 rounded-md">
-                    <MountainSnow />
-                    <p>کوهنوردی</p>
-                  </div>
-                  <h3 className="text-xl font-bold drop-shadow-lg hidden sm:block">
-                    تایتل مقاله
-                  </h3>
-                  <div className="flex items-center gap-2 text-sm font-semibold">
-                    <img
-                      className="h-6 w-6 rounded-full"
-                      src={defaultAvatar}
-                      alt="آواتار"
-                    />
-                    <p>10 مهر 1403</p>
-                    <p>3 دقیقه</p>
+          {articles.slice(0, 4).map((article) => (
+            <div className="rounded-2xl dark:border-none overflow-hidden h-fit sm:col-span-1 col-span-2">
+              <Link href="/">
+                <div className="relative w-full rounded-xl">
+                  <Image
+                    width={400}
+                    alt={article.thumbnail}
+                    height={200}
+                    src={defaultArticlePic}
+                    className="w-full h-full object-cover rounded-xl"
+                  />
+                  <div className="absolute bottom-0 left-0 w-full h-[10rem] bg-gradient-to-t from-primary dark:from-indigo-500 to-transparent"></div>
+                  <div className="text-white p-3 space-y-3 absolute bottom-0">
+                    <div className="inline-flex items-center gap-2 bg-amber-600 w-auto dark:bg-indigo-500 text-xs me-2 p-1 rounded-md">
+                      <MountainSnow />
+                      <p>{article.category.slug}</p>
+                    </div>
+                    <h3 className="text-xl font-bold drop-shadow-lg hidden sm:block">
+                      {article.title}
+                    </h3>
+                    <div className="flex items-center gap-2 text-sm font-semibold">
+                      <img
+                        className="h-6 w-6 rounded-full"
+                        src={defaultAvatar}
+                        alt="آواتار"
+                      />
+                      <p>10 مهر 1403</p>
+                      <p>{article.read_time} دقیقه مطالعه</p>
+                    </div>
                   </div>
                 </div>
-              </div>
-            </Link>
-          </div>
-          <div className="rounded-2xl dark:border-none overflow-hidden h-fit sm:col-span-1 col-span-2">
-            <Link href="/">
-              <div className="relative w-full rounded-xl">
-                <Image
-                  width={400}
-                  alt="عکس مقاله"
-                  height={200}
-                  src={defaultArticlePic}
-                  className="w-full h-full object-cover rounded-xl"
-                />
-                <div className="absolute bottom-0 left-0 w-full h-[10rem] bg-gradient-to-t from-primary dark:from-indigo-500 to-transparent"></div>
-                <div className="text-white p-3 space-y-3 absolute bottom-0">
-                  <div className="inline-flex items-center gap-2 bg-amber-600 w-auto dark:bg-indigo-500 text-xs me-2 p-1 rounded-md">
-                    <MountainSnow />
-                    <p>کوهنوردی</p>
-                  </div>
-                  <h3 className="text-xl font-bold drop-shadow-lg hidden sm:block">
-                    تایتل مقاله
-                  </h3>
-                  <div className="flex items-center gap-2 text-sm font-semibold">
-                    <img
-                      className="h-6 w-6 rounded-full"
-                      src={defaultAvatar}
-                      alt="آواتار"
-                    />
-                    <p>10 مهر 1403</p>
-                    <p>3 دقیقه</p>
-                  </div>
-                </div>
-              </div>
-            </Link>
-          </div>
-          <div className="rounded-2xl dark:border-none overflow-hidden h-fit sm:col-span-1 col-span-2">
-            <Link href="/">
-              <div className="relative w-full rounded-xl">
-                <Image
-                  width={400}
-                  alt="عکس مقاله"
-                  height={200}
-                  src={defaultArticlePic}
-                  className="w-full h-full object-cover rounded-xl"
-                />
-                <div className="absolute bottom-0 left-0 w-full h-[10rem] bg-gradient-to-t from-primary dark:from-indigo-500 to-transparent"></div>
-                <div className="text-white p-3 space-y-3 absolute bottom-0">
-                  <div className="inline-flex items-center gap-2 bg-amber-600 w-auto dark:bg-indigo-500 text-xs me-2 p-1 rounded-md">
-                    <MountainSnow />
-                    <p>کوهنوردی</p>
-                  </div>
-                  <h3 className="text-xl font-bold drop-shadow-lg hidden sm:block">
-                    تایتل مقاله
-                  </h3>
-                  <div className="flex items-center gap-2 text-sm font-semibold">
-                    <img
-                      className="h-6 w-6 rounded-full"
-                      src={defaultAvatar}
-                      alt="آواتار"
-                    />
-                    <p>10 مهر 1403</p>
-                    <p>3 دقیقه</p>
-                  </div>
-                </div>
-              </div>
-            </Link>
-          </div>
+              </Link>
+            </div>
+          ))}
         </div>
       </div>
     </section>
